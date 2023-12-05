@@ -1,0 +1,38 @@
+ALGORITHM chaine
+ VAR characters, words, vowels ,i , j:INTEGER;
+      sentence , v : STRING;
+ BEGIN 
+ READ (sentence)
+words:=1
+vowels:=0
+charachters:=1
+while (sentence [charachters]<> '.' ){
+    charachters:=charachters+1
+}
+end_while 
+
+
+FOR  i FROM 0 TO charachters DO 
+   IF(sentence [i]=' ') THEN
+ words:=words+1
+ END_IF
+END_FOR
+v:= "AEIOU"
+   
+FOR i FROM 0 TO  charachters DO 
+ FOR j FROM 0 TO 5 DO 
+   IF (sentence[i] = v[j] || sentence[i] = CAR( ASCII(v[j]+32)) ) THEN 
+     vowels := vowels+1
+     END_IF
+     END_FOR
+     END_FOR
+
+
+     WRITE("the sentence length is : "+  charachters)
+     WRITE("the numbers of vowels is: ")
+
+
+
+end 
+
+
